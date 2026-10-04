@@ -12,7 +12,7 @@ import {
   FileText
 } from 'lucide-react';
 import { SSPLogo } from './SSPLogo';
-import { createWhatsAppLink, DISPLAY_PHONE, STORE_LOCATION, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
+import { createWhatsAppLink, DISPLAY_PHONE, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
 
 interface HeaderProps {
   cartCount: number;
@@ -40,9 +40,7 @@ export const Header: React.FC<HeaderProps> = ({
     { label: 'Home', href: '#home' },
     { label: 'Menu', href: '#menu', icon: UtensilsCrossed },
     { label: 'Custom Cakes', href: '#custom-cakes', icon: Cake },
-    { label: 'Our Story', href: '#heritage' },
     { label: 'Location', href: '#outlet', icon: MapPin },
-    { label: 'Testimonials', href: '#reviews' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -52,10 +50,6 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="bg-[#24130A] text-[#F3E7D3] text-xs py-2 px-4 border-b border-[#3D2516]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
-            <span className="flex items-center gap-1.5 font-medium">
-              <MapPin className="w-3.5 h-3.5 text-[#E5A93C]" />
-              <span>{STORE_LOCATION}</span>
-            </span>
             <span className="hidden md:flex items-center gap-1.5 font-medium">
               <Clock className="w-3.5 h-3.5 text-[#E5A93C]" />
               <span>Open Daily: 9:00 AM – 12:00 Midnight</span>
