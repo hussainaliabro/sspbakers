@@ -12,7 +12,7 @@ import {
   FileText
 } from 'lucide-react';
 import { SSPLogo } from './SSPLogo';
-import { DISPLAY_PHONE, STORE_LOCATION, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
+import { createWhatsAppLink, DISPLAY_PHONE, STORE_LOCATION, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
 
 interface HeaderProps {
   cartCount: number;
@@ -37,11 +37,12 @@ export const Header: React.FC<HeaderProps> = ({
   }, []);
 
   const navLinks = [
+    { label: 'Home', href: '#home' },
     { label: 'Menu', href: '#menu', icon: UtensilsCrossed },
     { label: 'Custom Cakes', href: '#custom-cakes', icon: Cake },
-    { label: 'Since 1952', href: '#heritage' },
-    { label: 'Lucky One Outlet', href: '#outlet', icon: MapPin },
-    { label: 'Reviews', href: '#reviews' },
+    { label: 'Our Story', href: '#heritage' },
+    { label: 'Location', href: '#outlet', icon: MapPin },
+    { label: 'Testimonials', href: '#reviews' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -141,7 +142,7 @@ export const Header: React.FC<HeaderProps> = ({
 
             {/* WhatsApp Direct Order CTA */}
             <a
-              href={`https://wa.me/923107796560?text=${encodeURIComponent('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}`}
+              href={createWhatsAppLink('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-[#25D366] hover:bg-[#1EBE5D] text-white rounded-lg shadow-sm transition-all hover:shadow active:scale-95"
@@ -190,7 +191,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </button>
 
                 <a
-                  href={`https://wa.me/923107796560?text=${encodeURIComponent('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}`}
+                  href={createWhatsAppLink('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 py-2.5 text-sm font-bold bg-[#25D366] text-white rounded-lg shadow-sm"

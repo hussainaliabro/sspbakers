@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
-import { DISPLAY_PHONE, WHATSAPP_PHONE_DIGITS } from '../utils/whatsapp';
+import { createWhatsAppLink } from '../utils/whatsapp';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [showTooltip, setShowTooltip] = useState(true);
 
-  const directUrl = `https://wa.me/${WHATSAPP_PHONE_DIGITS}?text=${encodeURIComponent(
+  const directUrl = createWhatsAppLink(
     'Hello SSP Bakers! I would like to inquire about fresh items at Lucky One Outlet #45.'
-  )}`;
+  );
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-2">

@@ -3,6 +3,7 @@ import { Search, SlidersHorizontal, UtensilsCrossed, Sparkles, FileText, Check }
 import { CATEGORIES } from '../data/menuData';
 import { MenuCategory, MenuItem } from '../types';
 import { ProductCard } from './ProductCard';
+import { createWhatsAppLink } from '../utils/whatsapp';
 
 interface MenuSectionProps {
   items: MenuItem[];
@@ -186,7 +187,7 @@ export const MenuSection: React.FC<MenuSectionProps> = ({
           </div>
 
           <a
-            href={`https://wa.me/923107796560?text=${encodeURIComponent('Hello SSP Bakers! I would like to inquire about bulk party catering / hi-tea boxes from Lucky One Outlet #45.')}`}
+            href={createWhatsAppLink('Hello SSP Bakers! I would like to inquire about bulk party catering / hi-tea boxes from Lucky One Outlet #45.')}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm shadow-md transition-all active:scale-95 flex items-center gap-2"
