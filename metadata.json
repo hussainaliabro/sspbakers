@@ -1,0 +1,6 @@
+{
+  "name": "SSP Bakers - Freshly Baked Goods Since 1952",
+  "description": "Artisan bakery in Karachi offering freshly baked cakes, samosas, rolls, cookies and custom celebration cakes at Lucky One Outlet #45. Order online via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

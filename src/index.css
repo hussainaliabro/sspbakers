@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-bakery-gold: #D49A3D;
+  --color-bakery-warm: #E5A93C;
+  --color-bakery-brown: #3E2415;
+  --color-bakery-dark: #22120B;
+  --color-bakery-cream: #FDF8F0;
+  --color-bakery-accent: #C85A32;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-brand {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom scrollbar for menu & drawers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F3EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C49B66;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9C6F38;
+}
+
+/* Subtle flour dust / warm glow background pattern */
+.bg-warm-pattern {
+  background-color: #FFFDF9;
+  background-image: radial-gradient(#D49A3D18 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-dark-bakery {
+  background-color: #1F120A;
+  background-image: radial-gradient(#D49A3D22 1px, transparent 1px);
+  background-size: 28px 28px;
+}
