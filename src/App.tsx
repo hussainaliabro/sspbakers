@@ -110,23 +110,20 @@ export default function App() {
         />
 
         {/* Feature Badges Marquee Strip */}
-        <section className="bg-[#FAF3E8] border-y border-[#EADBCC] py-4 overflow-x-auto">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between gap-6 min-w-max text-xs font-bold text-[#6B4423]">
+        <section className="bg-[#FAF3E8] border-y border-[#EADBCC] py-4">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 text-xs font-bold text-[#6B4423]">
             <div className="flex items-center gap-2">
               <Flame className="w-4 h-4 text-[#C85A32]" />
               <span>Crispy Samosas & Rolls Fried Fresh on Order</span>
             </div>
-            <span className="text-[#DAC5AC]">•</span>
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-[#25D366]" />
               <span>100% Certified Halal & Pure Dairy Butter</span>
             </div>
-            <span className="text-[#DAC5AC]">•</span>
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#D49A3D]" />
               <span>Handcrafted Custom Cakes for All Occasions</span>
             </div>
-            <span className="text-[#DAC5AC]">•</span>
             <div className="flex items-center gap-2">
               <HeartHandshake className="w-4 h-4 text-[#C85A32]" />
               <span>Serving Karachi Families Since 1952</span>

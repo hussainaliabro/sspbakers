@@ -11,7 +11,7 @@ import {
   Star
 } from 'lucide-react';
 import { SSPLogo } from './SSPLogo';
-import { WHATSAPP_PHONE_DIGITS } from '../utils/whatsapp';
+import { createWhatsAppLink } from '../utils/whatsapp';
 
 interface HeroProps {
   onExploreMenu: () => void;
@@ -20,7 +20,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onCustomCake }) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#25130A] via-[#351B0D] to-[#25130A] text-[#FFFDF9] py-14 lg:py-24">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-[#25130A] via-[#351B0D] to-[#25130A] text-[#FFFDF9] py-12 sm:py-14 lg:py-24">
       {/* Decorative Warm Ambient Glows */}
       <div className="absolute top-0 left-1/4 -translate-x-1/2 w-96 h-96 bg-[#D49A3D]/15 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 translate-x-1/2 w-[32rem] h-[32rem] bg-[#C85A32]/15 rounded-full blur-3xl pointer-events-none" />
@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreMenu, onCustomCake }) => {
               </button>
 
               <a
-                href={`https://wa.me/${WHATSAPP_PHONE_DIGITS}?text=${encodeURIComponent('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}`}
+                href={createWhatsAppLink('Hello SSP Bakers! I would like to place an order from Lucky One Outlet #45.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-sm sm:text-base shadow-md transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2"

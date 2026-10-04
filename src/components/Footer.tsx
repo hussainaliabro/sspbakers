@@ -5,15 +5,13 @@ import {
   MapPin, 
   Clock, 
   MessageCircle, 
-  Heart, 
   Code2, 
   ArrowUp, 
   Instagram, 
-  Facebook, 
-  Share2
+  Facebook
 } from 'lucide-react';
 import { SSPLogo } from './SSPLogo';
-import { DEVELOPER_NAME, DISPLAY_PHONE, STORE_EMAIL, STORE_LOCATION, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
+import { DEVELOPER_NAME, DISPLAY_PHONE, SOCIAL_LINKS, STORE_EMAIL, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -37,7 +35,7 @@ export const Footer: React.FC = () => {
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-2">
               <a
-                href={`https://wa.me/923107796560`}
+                href={SOCIAL_LINKS.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#2D160B] hover:bg-[#25D366] text-white flex items-center justify-center transition-colors border border-[#4D2713]"
@@ -47,7 +45,7 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://instagram.com"
+                href={SOCIAL_LINKS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#2D160B] hover:bg-[#E1306C] text-white flex items-center justify-center transition-colors border border-[#4D2713]"
@@ -57,7 +55,7 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://facebook.com"
+                href={SOCIAL_LINKS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#2D160B] hover:bg-[#1877F2] text-white flex items-center justify-center transition-colors border border-[#4D2713]"
@@ -67,7 +65,7 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://tiktok.com"
+                href={SOCIAL_LINKS.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-[#2D160B] hover:bg-black text-white flex items-center justify-center transition-colors border border-[#4D2713]"

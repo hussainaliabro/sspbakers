@@ -9,9 +9,11 @@ import {
   ChevronUp, 
   HelpCircle,
   Share2,
-  CheckCircle2
+  CheckCircle2,
+  Instagram,
+  Facebook
 } from 'lucide-react';
-import { DISPLAY_PHONE, STORE_EMAIL, STORE_LOCATION, WHATSAPP_PHONE_RAW, createWhatsAppLink } from '../utils/whatsapp';
+import { DISPLAY_PHONE, SOCIAL_LINKS, STORE_EMAIL, WHATSAPP_PHONE_RAW, createWhatsAppLink } from '../utils/whatsapp';
 
 export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -193,6 +195,42 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <span className="block font-bold text-white">Primary Outlet:</span>
                     <span className="text-[#E3D1BE]">Shop #45, Food Court, Lucky One Mall, Karachi</span>
+                  </div>
+                </div>
+
+                <div className="pt-4 mt-4 border-t border-[#6A4128]/60">
+                  <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-[#E5A93C] mb-2">
+                    <Share2 className="w-3.5 h-3.5" />
+                    <span>Follow SSP Bakers</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <a
+                      href={SOCIAL_LINKS.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 rounded-lg bg-[#4D2D1A] hover:bg-[#E1306C] border border-[#6A4128] text-white flex items-center justify-center transition-colors"
+                      aria-label="SSP Bakers on Instagram"
+                    >
+                      <Instagram className="w-4 h-4" />
+                    </a>
+                    <a
+                      href={SOCIAL_LINKS.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 rounded-lg bg-[#4D2D1A] hover:bg-[#1877F2] border border-[#6A4128] text-white flex items-center justify-center transition-colors"
+                      aria-label="SSP Bakers on Facebook"
+                    >
+                      <Facebook className="w-4 h-4" />
+                    </a>
+                    <a
+                      href={SOCIAL_LINKS.tiktok}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 rounded-lg bg-[#4D2D1A] hover:bg-black border border-[#6A4128] text-white flex items-center justify-center transition-colors text-[10px] font-bold"
+                      aria-label="SSP Bakers on TikTok"
+                    >
+                      TT
+                    </a>
                   </div>
                 </div>
               </div>

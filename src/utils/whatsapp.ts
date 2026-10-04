@@ -3,9 +3,16 @@ import { CartItem, CustomCakeOrderState, MenuItem } from '../types';
 export const WHATSAPP_PHONE_RAW = '+923107796560';
 export const WHATSAPP_PHONE_DIGITS = '923107796560';
 export const DISPLAY_PHONE = '+92 310 7796560';
-export const STORE_EMAIL = 'hussainaliabro50@gmail.com';
+export const STORE_EMAIL = 'contact@sspbakers.com';
 export const STORE_LOCATION = 'Lucky One Outlet #45, Karachi';
 export const DEVELOPER_NAME = 'Hussain Ali';
+export const STORE_LOGO_URL = 'https://github.com/user-attachments/assets/867862c8-6ed3-4700-be76-a4a61c9694a7';
+export const SOCIAL_LINKS = {
+  instagram: 'https://www.instagram.com/sspbakers',
+  facebook: 'https://www.facebook.com/sspbakers',
+  tiktok: 'https://www.tiktok.com/@sspbakers',
+  whatsapp: `https://wa.me/${WHATSAPP_PHONE_DIGITS}`
+};
 
 export function createWhatsAppLink(message: string): string {
   const encoded = encodeURIComponent(message.trim());

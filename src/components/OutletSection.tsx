@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Navigation, CheckCircle, MessageCircle, ExternalLink } from 'lucide-react';
-import { DISPLAY_PHONE, STORE_EMAIL, STORE_LOCATION, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
+import { createWhatsAppLink, DISPLAY_PHONE, STORE_EMAIL, WHATSAPP_PHONE_RAW } from '../utils/whatsapp';
 
 export const OutletSection: React.FC = () => {
   const googleMapsUrl = 'https://maps.google.com/?q=Lucky+One+Mall+Karachi';
@@ -142,7 +142,7 @@ export const OutletSection: React.FC = () => {
               </a>
 
               <a
-                href={`https://wa.me/923107796560?text=${encodeURIComponent('Hello SSP Bakers! I am heading to Lucky One Outlet #45. Can I place an advance pickup order?')}`}
+                href={createWhatsAppLink('Hello SSP Bakers! I am heading to Lucky One Outlet #45. Can I place an advance pickup order?')}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold text-xs shadow-sm transition-all"
