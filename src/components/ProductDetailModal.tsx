@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, MessageCircle, ShoppingBag, Plus, Minus, Star, CheckCircle2, Clock, MapPin } from 'lucide-react';
 import { MenuItem } from '../types';
 import { generateItemWhatsAppUrl } from '../utils/whatsapp';
+import { getMenuImageUrl, handleMenuImageError } from '../utils/images';
 
 interface ProductDetailModalProps {
   item: MenuItem | null;
@@ -48,8 +49,9 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           {/* Header image banner */}
           <div className="relative aspect-[16/9] w-full bg-[#3D2516]">
             <img
-              src={item.image}
+              src={getMenuImageUrl(item.image)}
               alt={item.name}
+              onError={handleMenuImageError}
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />

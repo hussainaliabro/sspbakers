@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MessageCircle, ShoppingBag, Plus, Minus, Star, Info, Sparkles } from 'lucide-react';
 import { MenuItem } from '../types';
 import { generateItemWhatsAppUrl } from '../utils/whatsapp';
+import { getMenuImageUrl, handleMenuImageError } from '../utils/images';
 
 interface ProductCardProps {
   item: MenuItem;
@@ -39,9 +40,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product Image & Badges */}
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F3E9DD]">
         <img
-          src={item.image}
+          src={getMenuImageUrl(item.image)}
           alt={item.name}
           onLoad={() => setImageLoaded(true)}
+          onError={(event) => {
+            handleMenuImageError(event);
+            setImageLoaded(true);
+          }}
           className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
             imageLoaded ? 'opacity-100' : 'opacity-0'
           }`}

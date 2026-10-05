@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Trash2, Plus, Minus, MessageCircle, ShoppingBag, MapPin, Truck, ArrowRight } from 'lucide-react';
 import { CartItem } from '../types';
 import { generateCartWhatsAppUrl } from '../utils/whatsapp';
+import { getMenuImageUrl, handleMenuImageError } from '../utils/images';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -90,8 +91,9 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               items.map((item) => (
                 <div key={item.product.id} className="py-3.5 flex gap-3 items-center">
                   <img
-                    src={item.product.image}
+                    src={getMenuImageUrl(item.product.image)}
                     alt={item.product.name}
+                    onError={handleMenuImageError}
                     className="w-16 h-16 rounded-xl object-cover border border-[#DAC5AC] shrink-0"
                   />
                   <div className="flex-1 min-w-0">
